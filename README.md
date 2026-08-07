@@ -47,16 +47,31 @@ Open your browser and visit: **`http://localhost:3000`**
 
 ---
 
-## 🎨 Dynamic Rebranding
+## 🎨 Dynamic Rebranding & Social Links
 
-**CineTalk** includes a dynamic rebranding system. You can change the entire platform name across page titles, headers, OpenGraph metadata, privacy policy, and footers without modifying source code:
+**CineTalk** includes a fully dynamic rebranding system. You can change the platform name, developer contact, and social links across all page titles, headers, OpenGraph metadata, privacy policy, and footers directly from your [`.env`](.env) file without modifying source code:
 
 1. Open your [`.env`](.env) file.
-2. Set the `APP_NAME` variable:
+2. Configure your brand, developer contact, and social links:
    ```env
+   # App Name
    APP_NAME=CineTalk
+
+   # Developer / Contact Info
+   DEVELOPER_NAME=Asif Shabbir
+   DEVELOPER_LINKEDIN_URL=https://www.linkedin.com/in/asif-shabbiir/
+   DEVELOPER_CONTACT_LABEL=Contact Developer
+
+   # Social Links
+   SOCIAL_DISCORD_URL=#
+   SOCIAL_FACEBOOK_URL=#
+   SOCIAL_LINKEDIN_URL=https://www.linkedin.com/in/asif-shabbiir/
+   SOCIAL_YOUTUBE_URL=#
+   SOCIAL_EMAIL_URL=#
+   SOCIAL_SPONSOR_URL=#
+   SOCIAL_GITHUB_STAR_URL=https://github.com/yasirraheel/cinetalk
    ```
-3. Restart the server. All page titles, titles, meta tags, and footer copyright notices will update automatically.
+3. Restart the server. All page titles, headings, meta tags, developer links, and footer social links update automatically.
 
 ---
 
