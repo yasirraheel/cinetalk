@@ -2676,8 +2676,9 @@ textarea.form-input {
 }
 
 .features-tiles .tiles-item {
-    flex-basis: 360px;
-    max-width: 360px;
+    box-sizing: border-box !important;
+    flex-basis: 100%;
+    max-width: 100%;
     padding: 16px;
 }
 
@@ -2709,9 +2710,12 @@ textarea.form-input {
     }
 
     .features-tiles .tiles-item {
-        flex-basis: 33.333%;
-        max-width: 33.333%;
-        padding: 16px;
+        box-sizing: border-box !important;
+        flex: 0 0 33.333% !important;
+        flex-basis: 33.333% !important;
+        max-width: 33.333% !important;
+        width: 33.333% !important;
+        padding: 16px !important;
     }
 }
 
