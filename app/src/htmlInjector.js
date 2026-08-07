@@ -19,9 +19,31 @@ class HtmlInjector {
 
     // Function to get dynamic data for injection (e.g., OG data, title, app name, etc.)
     getInjectData() {
-        const appName = this.config?.app?.name || process.env.APP_NAME || 'MiroTalk';
+        const appName = this.config?.app?.name || process.env.APP_NAME || 'CineTalk';
+        const developerName = process.env.DEVELOPER_NAME || 'Asif Shabbir';
+        const developerLinkedinUrl = process.env.DEVELOPER_LINKEDIN_URL || 'https://www.linkedin.com/in/asif-shabbiir/';
+        const developerContactLabel = process.env.DEVELOPER_CONTACT_LABEL || 'Contact Developer';
+
+        const socialDiscordUrl = process.env.SOCIAL_DISCORD_URL || '#';
+        const socialFacebookUrl = process.env.SOCIAL_FACEBOOK_URL || '#';
+        const socialLinkedinUrl = process.env.SOCIAL_LINKEDIN_URL || developerLinkedinUrl;
+        const socialYoutubeUrl = process.env.SOCIAL_YOUTUBE_URL || '#';
+        const socialEmailUrl = process.env.SOCIAL_EMAIL_URL || '#';
+        const socialSponsorUrl = process.env.SOCIAL_SPONSOR_URL || '#';
+        const socialGithubStarUrl = process.env.SOCIAL_GITHUB_STAR_URL || 'https://github.com/yasirraheel/cinetalk';
+
         return {
             APP_NAME: appName,
+            DEVELOPER_NAME: developerName,
+            DEVELOPER_LINKEDIN_URL: developerLinkedinUrl,
+            DEVELOPER_CONTACT_LABEL: developerContactLabel,
+            SOCIAL_DISCORD_URL: socialDiscordUrl,
+            SOCIAL_FACEBOOK_URL: socialFacebookUrl,
+            SOCIAL_LINKEDIN_URL: socialLinkedinUrl,
+            SOCIAL_YOUTUBE_URL: socialYoutubeUrl,
+            SOCIAL_EMAIL_URL: socialEmailUrl,
+            SOCIAL_SPONSOR_URL: socialSponsorUrl,
+            SOCIAL_GITHUB_STAR_URL: socialGithubStarUrl,
             OG_TYPE: this.config?.og?.type || 'app-webrtc',
             OG_SITE_NAME: this.config?.og?.siteName || appName,
             OG_TITLE: this.config?.og?.title || 'Click the link to make a call.',

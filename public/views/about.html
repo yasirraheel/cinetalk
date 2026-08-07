@@ -52,7 +52,7 @@
                         <div class="footer-social">
                             <ul class="list-reset">
                                 <li class="footer-social-icon">
-                                    <a href="#">
+                                    <a target="_blank" href="{{SOCIAL_DISCORD_URL}}">
                                         <svg
                                             width="16"
                                             height="16"
@@ -67,7 +67,7 @@
                                     </a>
                                 </li>
                                 <li class="footer-social-icon">
-                                    <a href="#">
+                                    <a target="_blank" href="{{SOCIAL_FACEBOOK_URL}}">
                                         <svg
                                             width="16"
                                             height="16"
@@ -82,7 +82,7 @@
                                     </a>
                                 </li>
                                 <li class="footer-social-icon">
-                                    <a href="#">
+                                    <a target="_blank" href="{{SOCIAL_LINKEDIN_URL}}">
                                         <svg
                                             width="16"
                                             height="16"
@@ -97,7 +97,7 @@
                                     </a>
                                 </li>
                                 <li class="footer-social-icon">
-                                    <a href="#">
+                                    <a target="_blank" href="{{SOCIAL_YOUTUBE_URL}}">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="18"
@@ -113,7 +113,7 @@
                                     </a>
                                 </li>
                                 <li class="footer-social-icon">
-                                    <a href="#">
+                                    <a target="_blank" href="{{SOCIAL_EMAIL_URL}}">
                                         <svg
                                             width="16"
                                             height="16"
@@ -132,7 +132,7 @@
                                     <!-- https://buttons.github.io/ -->
                                     <a
                                         class="github-button"
-                                        href="#"
+                                        href="{{SOCIAL_SPONSOR_URL}}"
                                         data-color-scheme="no-preference: light; light: light; dark: dark;"
                                         data-icon="octicon-heart"
                                         data-size="large"
@@ -143,11 +143,11 @@
                                 <li>
                                     <a
                                         class="github-button"
-                                        href="https://github.com/yasirraheel/cinetalk"
+                                        href="{{SOCIAL_GITHUB_STAR_URL}}"
                                         data-color-scheme="no-preference: light; light: light; dark: dark;"
                                         data-size="large"
                                         data-show-count="true"
-                                        aria-label="Star yasirraheel/cinetalk on GitHub"
+                                        aria-label="Star on GitHub"
                                         >Star</a
                                     >
                                 </li>
@@ -163,9 +163,14 @@
                                 <li>
                                     <a href="/api/v1/docs/">Rest API</a>
                                 </li>
+                                <li>
+                                    <a target="_blank" href="{{DEVELOPER_LINKEDIN_URL}}"
+                                        >{{DEVELOPER_CONTACT_LABEL}}</a
+                                    >
+                                </li>
                             </ul>
                         </nav>
-                        <div class="footer-copyright">&copy; 2026 CineTalk, all rights reserved</div>
+                        <div class="footer-copyright">&copy; 2026 {{APP_NAME}}, all rights reserved</div>
                     </div>
                 </div>
             </div>

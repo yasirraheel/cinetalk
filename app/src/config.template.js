@@ -358,10 +358,28 @@ module.exports = {
             supportUs: false,
             footer: true,
         },
+        developer: {
+            name: process.env.DEVELOPER_NAME || 'Asif Shabbir',
+            linkedinUrl: process.env.DEVELOPER_LINKEDIN_URL || 'https://www.linkedin.com/in/asif-shabbiir/',
+            label: process.env.DEVELOPER_CONTACT_LABEL || 'Contact Developer',
+        },
+        social: {
+            discord: process.env.SOCIAL_DISCORD_URL || '#',
+            facebook: process.env.SOCIAL_FACEBOOK_URL || '#',
+            linkedin: process.env.SOCIAL_LINKEDIN_URL || 'https://www.linkedin.com/in/asif-shabbiir/',
+            youtube: process.env.SOCIAL_YOUTUBE_URL || '#',
+            email: process.env.SOCIAL_EMAIL_URL || '#',
+            sponsor: process.env.SOCIAL_SPONSOR_URL || '#',
+            githubStar: process.env.SOCIAL_GITHUB_STAR_URL || 'https://github.com/yasirraheel/cinetalk',
+        },
         about: {
             imageUrl: '../images/mirotalk-logo.gif',
             title: `${appName} WebRTC P2P v${packageJson.version}`,
             html: `
+                Developer: <a id="linkedin-button" href="${process.env.DEVELOPER_LINKEDIN_URL || 'https://www.linkedin.com/in/asif-shabbiir/'}" target="_blank">
+                    ${process.env.DEVELOPER_NAME || 'Asif Shabbir'}
+                </a>
+                <br /><br />
                 <hr />
                 <span>&copy; ${new Date().getFullYear()} ${appName}, all rights reserved</span>
                 <hr />
