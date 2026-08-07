@@ -374,6 +374,9 @@ const filesPath = [
     views.activeRooms,
     views.customizeRoom,
     views.waitingRoom,
+    views.about,
+    views.privacy,
+    views.notFound,
 ];
 const htmlInjector = new HtmlInjector(filesPath, config.brand || null);
 
@@ -617,12 +620,12 @@ app.get('/stats', (req, res) => {
 
 // mirotalk about
 app.get(['/about'], (req, res) => {
-    res.sendFile(views.about);
+    return htmlInjector.injectHtml(views.about, res);
 });
 
 // privacy policy
 app.get(['/privacy'], (req, res) => {
-    res.sendFile(views.privacy);
+    return htmlInjector.injectHtml(views.privacy, res);
 });
 
 // test Stun and Turn connections
@@ -1094,7 +1097,8 @@ app.get(`${apiBasePath}/activeRooms`, (req, res) => {
 
 // not match any of page before, so 404 not found
 app.use((req, res) => {
-    res.sendFile(views.notFound);
+    res.status(404);
+    return htmlInjector.injectHtml(views.notFound, res);
 });
 
 // Global error handler for URIError and other errors
