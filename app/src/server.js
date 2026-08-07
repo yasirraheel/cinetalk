@@ -210,8 +210,8 @@ const testStunTurn = host + '/icetest';
 const IPLookupEnabled = config.ipLookup.enabled;
 
 // Survey URL
-const surveyEnabled = config.survey.enabled;
-const surveyURL = config.survey.url;
+const surveyEnabled = config.survey?.enabled ?? true;
+const getSurveyURL = () => process.env.SURVEY_URL || config.survey?.url || 'https://cineworm.org/page/contact-us';
 
 // Redirect URL
 const redirectEnabled = config.redirect.enabled;
@@ -1174,7 +1174,7 @@ function getServerConfig(tunnel = false) {
             : false,
 
         // URLs for Redirection and Survey
-        survey: surveyEnabled ? surveyURL : false,
+        survey: surveyEnabled ? getSurveyURL() : false,
         redirect: redirectEnabled ? redirectURL : false,
 
         // Widget Configuration
@@ -1585,7 +1585,7 @@ io.sockets.on('connect', async (socket) => {
             is_presenter: isPresenter,
             survey: {
                 active: surveyEnabled,
-                url: surveyURL,
+                url: getSurveyURL(),
             },
             redirect: {
                 active: redirectEnabled,
