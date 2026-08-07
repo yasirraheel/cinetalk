@@ -42,7 +42,7 @@ function parseJsonEnv(envValue, fallback) {
 }
 
 const port = process.env.PORT || 3000;
-const appName = process.env.APP_NAME || 'MiroTalk';
+const appName = process.env.APP_NAME || 'CineTalk';
 
 module.exports = {
     // ==========================================
@@ -412,7 +412,7 @@ module.exports = {
                     connectText: 'connect in < 5 seconds',
                     onlineText: 'We are online',
                     offlineText: 'We are offline',
-                    poweredBy: 'Powered by MiroTalk',
+                    poweredBy: `Powered by ${appName}`,
                 },
             },
         },

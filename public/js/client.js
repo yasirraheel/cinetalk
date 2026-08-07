@@ -2019,7 +2019,7 @@ async function whoAreYou() {
         allowOutsideClick: false,
         allowEscapeKey: false,
         background: swBg,
-        title: brand.app?.name || 'MiroTalk P2P',
+        title: brand.app?.name || 'CineTalk',
         position: 'center',
         input: 'text',
         inputPlaceholder: 'Enter your email or name',
@@ -8621,7 +8621,7 @@ function shareRoomByEmail() {
             const selectedDateTime = document.getElementById('datetimePicker').value;
             const roomPassword = isRoomLocked && thisRoomPassword ? 'Password: ' + thisRoomPassword + newLine : '';
             const email = '';
-            const emailSubject = `Please join our MiroTalk P2P Video Chat Meeting`;
+            const emailSubject = `Please join our ${brand.app?.name || 'CineTalk'} Video Chat Meeting`;
             const emailBody = `The meeting is scheduled at: ${newLine} DateTime: ${selectedDateTime} ${newLine}${roomPassword}Click to join: ${roomURL} ${newLine}`;
             document.location = 'mailto:' + email + '?subject=' + emailSubject + '&body=' + emailBody;
         },
@@ -16023,7 +16023,7 @@ function leaveFeedback() {
         imageUrl: images.feedback,
         position: 'top',
         title: 'Leave a feedback',
-        text: 'Do you want to rate your MiroTalk experience?',
+        text: `Do you want to rate your ${brand.app?.name || 'CineTalk'} experience?`,
         confirmButtonText: `Yes`,
         denyButtonText: `No`,
         cancelButtonText: `Cancel`,
