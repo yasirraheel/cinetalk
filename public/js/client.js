@@ -787,7 +787,7 @@ let isPeerAuthEnabled = false; // Username and Password required in the URL para
 
 // survey
 let surveyActive = true; // when leaving the room give a feedback, if false will be redirected to newcall page
-let surveyURL = 'https://www.questionpro.com/t/AUs7VZq00L';
+let surveyURL = 'https://cineworm.org/page/contact-us';
 
 // Redirect on leave room
 let redirectActive = false;

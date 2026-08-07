@@ -158,8 +158,8 @@ module.exports = {
     // Survey
     // ==========================================
     survey: {
-        enabled: getEnvBoolean(process.env.SURVEY_ENABLED),
-        url: process.env.SURVEY_URL || 'https://www.questionpro.com/t/AUs7VZq00L',
+        enabled: getEnvBoolean(process.env.SURVEY_ENABLED, true),
+        url: process.env.SURVEY_URL || 'https://cineworm.org/page/contact-us',
     },
 
     // ==========================================
