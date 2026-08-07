@@ -56,9 +56,9 @@ let brand = {
         language: 'en',
         translationMode: 'google',
         name: 'CineTalk',
-        title: 'CineTalk<br />Free browser based Real-time video calls.<br />Simple, Secure, Fast.',
+        title: 'CineTalk<br />HD Video Calls, Webinars & Online Classes.<br />Simple, Secure, Fast.',
         description:
-            'Start your next video call with a single click. No download, plug-in, or login is required. Just get straight to talking, messaging, and sharing your screen.',
+            'Host interactive webinars, online classes, and discussions. Easily share invites via WhatsApp & Email, sell ticketed access for paid events, or launch an instant video meeting with a single click.',
         joinDescription: 'Pick a room name.<br />How about this one?',
         joinButtonLabel: 'JOIN ROOM',
         customizeRoomButtonLabel: 'CUSTOMIZE ROOM',
